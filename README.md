@@ -1,5 +1,5 @@
 # portfolio
-Portfolio updated 9/22/2021
+Portfolio updated November 2021
 
 This is the portfolio of M. A. Parks. It covers their work in web development, eBooks, philosophy, and art. Various links take users to different projects Max has worked on. 
 
