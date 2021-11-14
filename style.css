@@ -1,9 +1,9 @@
 /* color scheme sourced from http://khroma.co/generator/ */
 :root {
-  --outer-space: #bc6c25;
-  --bright-turquoise: #606c38;
+  --outer-space: darkblue;
+  --bright-turquoise: lightblue;
   --gin: #fefae0;
-  --heliotrope: #283618;
+  --heliotrope: red;
 }
 
 /* set content highlight color and background */
