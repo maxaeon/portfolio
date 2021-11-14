@@ -2,7 +2,7 @@
 :root {
   --outer-space: darkblue;
   --bright-turquoise: lightblue;
-  --gin: #fefae0;
+  --gin: white;
   --heliotrope: red;
 }
 
@@ -242,7 +242,7 @@ li {
 
 a {
   text-decoration: none;
-  color: #dda15e;
+  color: darkred;
 }
 
 header,
@@ -250,7 +250,7 @@ footer {
   height: 60px;
   width: 100%;
   line-height: 60px;
-  background-color: #606c38;
+  background-color: darkblue;
 }
 
 
@@ -258,8 +258,8 @@ footer {
   position: absolute;
   margin-top: 0;
   bottom: 0;
-  border-bottom: 10px solid #bc6c25;
-  color: #fefae0;    
+  border-bottom: 10px solid skyblue;
+  color: skyblue;    
 }
 
 figure {
@@ -274,8 +274,9 @@ img {
 section {
   margin-bottom: 0;
   padding: 20px 10px 40px 10px;
-  border-top: 3px solid #dda15e;
-  background-color:  #fefae0;
+  border-top: 3px solid skyblue;
+  background-color:  darkblue;
+  color: skyblue
 }
 
 form {
@@ -283,7 +284,7 @@ form {
   margin: 0 auto;
   width: 500px;
   padding: 10px;
-  border: 5px solid #dda15e;
+  border: 5px solid darkblue;
   border-radius: 20px;
 }
 
@@ -296,7 +297,7 @@ input,
 textarea {
   box-sizing: border-box;
   width: 300px;
-  border: 1px solid #283618;
+  border: 1px solid darkblue;
 }
 
 textarea {
@@ -307,8 +308,8 @@ textarea {
 button {
   height: 40px;
   width: 120px;
-  background-color: #283618;
-  color: #fefae0;
+  background-color: red;
+  color: white;
 }
  
 /* Class Selectors */
