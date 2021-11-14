@@ -1,326 +1,310 @@
-/* color scheme sourced from http://khroma.co/generator/ */
-:root {
-  --outer-space: darkblue;
-  --bright-turquoise: lightblue;
-  --gin: white;
-  --heliotrope: red;
-}
-
-/* set content highlight color and background */
-::selection {
-  background-color: var(--bright-turquoise);
-  color: var(--outer-space);
-}
-
-html {
-  /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
-  font-size: 62.5%;
-}
-
-body {
-  /* Sans Serif font stack is implemented to help select the best font for each type of computer operating system */
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-
-  /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
-  font-size: 1.75rem;
-  line-height: 1.5;
-  color: var(--gin);
-  background-color: var(--outer-space);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: 0.625rem;
-  color: var(--heliotrope);
-  font-weight: 700;
-  line-height: 1.1;
-}
-
-h1 {
-  /* 4rem = 40px (4 * 10px) */
-  font-size: 4rem;
-}
-
-h2 {
-  font-size: 3.5rem;
-}
-
-h3 {
-  font-size: 3rem;
-}
-
-h4 {
-  font-size: 2.5rem;
-}
-
-h5 {
-  font-size: 2rem;
-}
-
-h6 {
-  font-size: 1.5rem;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-
-header {
-  width: 96%;
-  margin: 0 auto;
-  padding: 2.5rem;
-  text-align: center;
-  border-bottom: 10px solid blue;
-
-}
-
-header h1.page-title {
-  padding: 1rem 1.2rem;
-  font-size: 4.5rem;
-}
-
-main {
-  width: 96%;
-  margin: 2rem auto;
-}
-
-footer {
-  margin: 1.5rem;
-  text-align: center;
-}
-
-/* create our main grid with flexbox, use negative margins to offset the padding on the .card-column class */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-/* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
-.card-column {
-  flex: 1 0 100%;
-  padding: 1.5rem;
-  /* when the screen resizes, make it so our columns don't jump in size */
-  transition: flex-basis 500ms linear;
-  margin-bottom: 1.5rem;
-}
-
-/* make each code card a flexbox column to align and justify content within it */
-.code-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-height: 100%;
-  padding: 2rem;
-  color: var(--heliotrope);
-}
-
-.code-card .card-header {
-  /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
-  position: relative;
-  margin: -4rem 0 1.5rem 0;
-  padding: 0.5rem 1rem;
-  background-color: var(--outer-space);
-  color: var(--heliotrope);
-  border: 2px solid var(--gin);
-  border-radius: 8px;
-  transition: all 0.5s ease-in-out;
-}
-
-/* set an outer and inner drop shadow on the card to create a glowing effect on hover */
-.code-card:hover,
-.code-card:hover .card-header {
-  box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
-}
-
-/* each card's code block grows to the height of the largest code block on the page, making each card even in height */
-.code-card .code-block {
-  flex-grow: 1;
-}
-
-.code-card pre {
-  /* set styles to make it so code wraps in <pre> instead of overflowing */
-  white-space: pre-wrap;
-  overflow: auto;
-  tab-size: 4;
-  padding: 1.2rem 1rem;
-  color: var(--gin);
-  border-radius: 8px;
-  /* use linear-gradient() function to create a fading background  */
-  background-image: linear-gradient(
-    rgba(232, 102, 236, 0.3) 0%,
-    rgba(232, 102, 236, 0.6) 100%
-  );
-  display: flex;
-  align-items: center;
-}
-
-/* on <pre> click, select all contents so the code is highlighted */
-.code-card pre:active {
-  user-select: all;
-}
-
-/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
-@media screen and (min-width: 768px) {
-  /* on tablets, set columns to only be 50% of the width and not grow */
-  .card-column {
-    flex: 0 0 50%;
-    max-width: 50%;
+ 
+  html {
+    /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
+    font-size: 62.5%;
   }
-
-  /* select the last child to grow to full width if it has space to grow */
-  .card-column:last-child {
+  
+  body {
+    /* Sans Serif font stack is implemented to help select the best font for each type of computer operating system */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+      Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  
+    /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
+    font-size: 1.75rem;
+    line-height: 1.5;
+    color: darkblue;
+    background-color: lightsteelblue;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0.625rem;
+    color: darkblue;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  
+  h1 {
+    /* 4rem = 40px (4 * 10px) */
+    font-size: 4rem;
+  }
+  
+  h2 {
+    font-size: 3.5rem;
+  }
+  
+  h3 {
+    font-size: 3rem;
+  }
+  
+  h4 {
+    font-size: 2.5rem;
+  }
+  
+  h5 {
+    font-size: 2rem;
+  }
+  
+  h6 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  
+  header {
+    width: 96%;
+    margin: 0 auto;
+    padding: 2.5rem;
+    text-align: center;
+    border-bottom: 10px solid blue;
+  
+  }
+  
+  header h1.page-title {
+    padding: 1rem 1.2rem;
+    font-size: 4.5rem;
+  }
+  
+  main {
+    width: 96%;
+    margin: 2rem auto;
+  }
+  
+  footer {
+    margin: 1.5rem;
+    text-align: center;
+  }
+  
+  /* create our main grid with flexbox, use negative margins to offset the padding on the .card-column class */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  /* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
+  .card-column {
+    flex: 1 0 100%;
+    padding: 1.5rem;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* make each code card a flexbox column to align and justify content within it */
+  .code-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding: 2rem;
+    color: darkred;
+  }
+  
+  .code-card .card-header {
+    /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
+    position: relative;
+    margin: -4rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    background-color: lightblue;
+    color: darkblue;
+    border: 2px solid var(--gin);
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  /* set an outer and inner drop shadow on the card to create a glowing effect on hover */
+  .code-card:hover,
+  .code-card:hover .card-header {
+    box-shadow: inset 0px 0px 8px darkblue, 0 0 15px darkblue;
+  }
+  
+  /* each card's code block grows to the height of the largest code block on the page, making each card even in height */
+  .code-card .code-block {
     flex-grow: 1;
   }
-}
-
-/* media query for larger screens */
-@media screen and (min-width: 992px) {
-  header {
-    width: 75%;
-  }
-
-  .card-column {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Universal Selector */
-* {
-  margin:0;
-  padding:0;  
-}
-
-/* Element Selectors */
-body {
-  position: relative;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
-  font-size: 20px;
-  background-color: skyblue;
-  color: darkblue;
-}
-
-h1,
-h2 {
-  margin: 20px;
-}
-
-main {
-  padding: 60px 0;
-}
-
-li {
-  display: inline;
-  padding: 0px 20px;
-  text-decoration: none;
-}
-
-a {
-  text-decoration: none;
-  color: darkred;
-}
-
-header,
-footer {
-  height: 60px;
-  width: 100%;
-  line-height: 60px;
-  background-color: darkblue;
-}
-
-
-footer {
-  position: absolute;
-  margin-top: 0;
-  bottom: 0;
-  border-bottom: 10px solid skyblue;
-  color: skyblue;    
-}
-
-figure {
-  margin-bottom: 40px;
-}
-
-img {
-  display: block;
-  margin: 20px auto;
-}
-
-section {
-  margin-bottom: 0;
-  padding: 20px 10px 40px 10px;
-  border-top: 3px solid skyblue;
-  background-color:  darkblue;
-  color: skyblue
-}
-
-form {
-  /* Center the form on the page */
-  margin: 0 auto;
-  width: 500px;
-  padding: 10px;
-  border: 5px solid darkblue;
-  border-radius: 20px;
-}
-
-label {
-  display: inline-block;
-  width: 100px;
-}
   
-input, 
-textarea {
-  box-sizing: border-box;
-  width: 300px;
-  border: 1px solid darkblue;
-}
-
-textarea {
-  vertical-align: top;
-  height: 60px;
-}
+  .code-card pre {
+    white-space: pre-wrap;
+    overflow: auto;
+    tab-size: 4;
+    padding: 1.2rem 1rem;
+    color: white;
+    border-radius: 8px;
   
-button {
-  height: 40px;
-  width: 120px;
-  background-color: red;
-  color: white;
-}
- 
-/* Class Selectors */
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-left {
-  text-align: left;
-}
+    display: flex;
+    align-items: center;
+  }
+  
+  /* on <pre> click, select all contents so the code is highlighted */
+  .code-card pre:active {
+    user-select: all;
+  }
+  
+  /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+  @media screen and (min-width: 768px) {
+    /* on tablets, set columns to only be 50% of the width and not grow */
+    .card-column {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  
+    /* select the last child to grow to full width if it has space to grow */
+    .card-column:last-child {
+      flex-grow: 1;
+    }
+  }
+  
+  /* media query for larger screens */
+  @media screen and (min-width: 992px) {
+    header {
+      width: 75%;
+    }
+  
+    .card-column {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Universal Selector */
+  * {
+    margin:0;
+    padding:0;  
+  }
+  
+  /* Element Selectors */
+  body {
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    font-size: 20px;
+    background-color: lightblue;
+    color: darkblue;
+  }
+  
+  h1,
+  h2 {
+    margin: 20px;
+  }
+  
+  main {
+    padding: 60px 0;
+  }
+  
+  li {
+    display: inline;
+    padding: 0px 20px;
+    text-decoration: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: rgb(75, 0, 0)
+  }
+  
+  header,
+  footer {
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    background-color: darkblue;
+    color: skyblue
+  }
+  
+  
+  footer {
+    position: absolute;
+    margin-top: 0;
+    bottom: 0;
+    border-bottom: 10px solid blue;
+    color: lightblue;    
+  }
+  
+  figure {
+    margin-bottom: 40px;
+  }
+  
+  img {
+    display: block;
+    margin: 20px auto;
+  }
+  
+  section {
+    margin-bottom: 0;
+    padding: 20px 10px 40px 10px;
+    border-top: 3px solid darkblue;
+    background-color:  lightblue;
+    color: darkblue
+  }
+  
+  form {
+    /* Center the form on the page */
+    margin: 0 auto;
+    width: 500px;
+    padding: 10px;
+    border: 5px solid darkblue;
+    border-radius: 20px;
+  }
+  
+  label {
+    display: inline-block;
+    width: 100px;
+  }
+    
+  input, 
+  textarea {
+    box-sizing: border-box;
+    width: 300px;
+    border: 1px solid darkblue;
+  }
+  
+  textarea {
+    vertical-align: top;
+    height: 60px;
+  }
+    
+  button {
+    height: 40px;
+    width: 120px;
+    background-color: red;
+    color: white;
+  }
+   
+  /* Class Selectors */
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+  
+  .text-left {
+    text-align: left;
+  }
+  
