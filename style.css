@@ -64,7 +64,7 @@
     padding: 2.5rem;
     text-align: center;
     border-bottom: 10px solid blue;
-  
+    background=color: lightblue;
   }
   
   header h1.page-title {
@@ -232,7 +232,6 @@
     height: 60px;
     width: 100%;
     line-height: 60px;
-    background-color: darkblue;
     color: skyblue
   }
   
@@ -242,6 +241,7 @@
     margin-top: 0;
     bottom: 0;
     border-bottom: 10px solid blue;
+    background-color: darkblue;
     color: lightblue;    
   }
   
